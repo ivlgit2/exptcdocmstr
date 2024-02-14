@@ -1,0 +1,1702 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/></edmx:Reference>
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/></edmx:Reference>
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value"><edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/></edmx:Reference>
+	<edmx:Reference Uri="../../../bri/sb_docset/$metadata"><edmx:Include Namespace="SB_DOCSET" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="com.sap.bri.sb_docset_van.v1">
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_DGFTType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Maintain Code type"/><PropertyValue Property="ID" String="Code_type"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Code"/><PropertyValue Property="Value" Path="code"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Code Type"/><PropertyValue Property="Value" Path="codtyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Code Description"/><PropertyValue Property="Value" Path="coddesc"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="code"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="codtyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="coddesc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.Clubbing_Splitting_HeaderType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Exports Clubbing Splitting : Header"/><PropertyValue Property="ID" String="docclas"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Exports Clubbing Splitting : Header"/><PropertyValue Property="TypeNamePlural" String="Exports Clubbing Splitting : Heade"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="deleted"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aedat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aenam"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="erdat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ernam"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vkorg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vbelndate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vbelndoc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sonum"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="deleted"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aedat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aenam"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="erdat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ernam"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vkorg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vbelndate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vbelndoc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sonum"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.Clubbing_Splitting_ItemType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Exports Clubbing Splitting : Item"/><PropertyValue Property="ID" String="docclas"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Exports Clubbing Splitting : Header"/><PropertyValue Property="TypeNamePlural" String="Exports Clubbing Splitting : Item"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="totbrgew"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="totntgew"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="kwmeng"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="uecha"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="arktx"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="charg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pstyv"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gewei"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brgew"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ntgew"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="waerk"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netwr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netpr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vrkme"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="quantity"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="totqty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="nopack"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="packtype"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="hscode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="posnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vbelndoc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sonum"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="totbrgew"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="totntgew"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="kwmeng"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="uecha"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="arktx"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="charg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pstyv"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gewei"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brgew"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ntgew"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="waerk"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netwr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netpr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vrkme"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="quantity"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="totqty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="nopack"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="packtype"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="hscode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="posnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vbelndoc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sonum"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxi_edsbill_a5Type">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Billing Details"/><PropertyValue Property="ID" String="edsbill"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EXIM : EDS Billing Details"/><PropertyValue Property="TypeNamePlural" String="EXIM : EDS Billing Details"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invexgh"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cstexgh"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invcur"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invamtinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invcurinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invamtexgh"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtcur"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtamtinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtcurinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtamtexgh"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insuamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insucur"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insuamtinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insucurinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insuamtexgh"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="commamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="commcur"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comamtinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comcurinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comamtexgh"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="discamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="disccur"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="discamtinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="disccurinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="discamtexgh"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advcur"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advamtinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advcurinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advamtexgh"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="breakup"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advbreakup"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="commcheck"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="actualinsurance"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="actualfrieght"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="actualinscurr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="actualfrecurr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="negodate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="negduedate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="intdays"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brcreceived"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fullyreal"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstcur"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstamtinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstcurinr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstamtexgh"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invexgh"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cstexgh"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invcur"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invamtinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invcurinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invamtexgh"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtcur"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtamtinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtcurinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgtamtexgh"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insuamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insucur"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insuamtinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insucurinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insuamtexgh"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="commamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="commcur"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comamtinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comcurinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comamtexgh"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="discamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="disccur"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="discamtinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="disccurinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="discamtexgh"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advcur"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advamtinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advcurinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advamtexgh"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="breakup"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="advbreakup"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="commcheck"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="actualinsurance"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="actualfrieght"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="actualinscurr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="actualfrecurr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="negodate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="negduedate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="intdays"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brcreceived"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fullyreal"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstcur"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstamtinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstcurinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="igstamtexgh"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxi_edsbrc_a7Type">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Document Set - Bank Realisation"/><PropertyValue Property="ID" String="edsbrc"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Document Set - Bank Realisation"/><PropertyValue Property="TypeNamePlural" String="Document Set - Bank Realisation"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brcnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brcdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bankaneg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="banklneg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bankrefnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valuereal"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="realcurr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valuereal_rs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fob_value_fc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exchrate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fob_value_rs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="realdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="real_rem"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="currinr"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brcnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brcdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bankaneg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="banklneg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bankrefnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valuereal"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="realcurr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valuereal_rs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exchrate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fob_value_fc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fob_value_rs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="realdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="real_rem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="currinr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.DocumentflowType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Document Flow"/><PropertyValue Property="ID" String="docclas"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Document Flow"/><PropertyValue Property="TypeNamePlural" String="Document Flow"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Document Class"/><PropertyValue Property="Value" Path="docclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Document Description"/><PropertyValue Property="Value" Path="value"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="consignee"/><PropertyValue Property="Value" Path="consignee"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="payee"/><PropertyValue Property="Value" Path="payee"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Match code for document class"/><PropertyValue Property="Value" Path="mcode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Level"/><PropertyValue Property="Value" Path="lvl"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Export Obligation Check"/><PropertyValue Property="Value" Path="oblig"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Type of document"/><PropertyValue Property="Value" Path="ortyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Reference Table"/><PropertyValue Property="Value" Path="reftable"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Reference Field"/><PropertyValue Property="Value" Path="refield"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Reference Item Table"/><PropertyValue Property="Value" Path="refitemtable"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="FIRC Relevent"/><PropertyValue Property="Value" Path="fircrel"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="BOE Relevent"/><PropertyValue Property="Value" Path="boerel"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Clubbing Relevent"/><PropertyValue Property="Value" Path="clubdocset"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Clubbing Document Category"/><PropertyValue Property="Value" Path="clubdoccat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Match Code"/><PropertyValue Property="Value" Path="clubmcode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Pricing Condition"/><PropertyValue Property="Value" Path="prccondx"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Intent Relevent"/><PropertyValue Property="Value" Path="indentrel"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Preshipment Flag"/><PropertyValue Property="Value" Path="preshipment"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Postshipment Flag"/><PropertyValue Property="Value" Path="postshipment"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Preceeding Document category"/><PropertyValue Property="Value" Path="predoccat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Suceeding Document category"/><PropertyValue Property="Value" Path="sucdoccat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Eligible for LC attachment"/><PropertyValue Property="Value" Path="explc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Reference Document Class"/><PropertyValue Property="Value" Path="refdocclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Document Type"/><PropertyValue Property="Value" Path="billtype"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Confirmation"/><PropertyValue Property="Value" Path="obliglvl"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="value"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="consignee"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="payee"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="mcode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lvl"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="oblig"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ortyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="reftable"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refield"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refitemtable"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fircrel"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="boerel"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="clubdocset"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="clubdoccat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="clubmcode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="prccondx"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="indentrel"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="preshipment"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="postshipment"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="predoccat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sucdoccat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="explc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refdocclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="billtype"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obliglvl"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.Document_masterType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Documents"/><PropertyValue Property="ID" String="doccode"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Documents"/><PropertyValue Property="TypeNamePlural" String="Documents"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doccode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docdescr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Document Category(I-Incoming/O-Outgoing)"/><PropertyValue Property="Value" Path="doccate"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doccode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docdescr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doccate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_EDSDOCS_A6Type">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Partner Function Details"/><PropertyValue Property="ID" String="EDSDOCS"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EXIM : EDS Negotiating Documents"/><PropertyValue Property="TypeNamePlural" String="EXIM : EDS Negotiating Documents"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docdescr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doccode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docorg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doccopy"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doc_no"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doc_dt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docchk"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docdescr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doccode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docorg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doccopy"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doc_no"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="doc_dt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docchk"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_EDSGENHD_A1Type">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS General Header Details"/><PropertyValue Property="ID" String="EDSGENHD"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Shipping Header Table"/><PropertyValue Property="ID" String="edshphd"/><PropertyValue Property="Target" AnnotationPath="to_EDSHPHD_A2/@UI.LineItem"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Partner Function Details"/><PropertyValue Property="ID" String="EDSPARTDET"/><PropertyValue Property="Target" AnnotationPath="to_EDSPARTDET_A3/@UI.LineItem"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Item Details"/><PropertyValue Property="ID" String="edsitem"/><PropertyValue Property="Target" AnnotationPath="to_EDSITEM_A4/@UI.LineItem"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Billing Details"/><PropertyValue Property="ID" String="edsbill"/><PropertyValue Property="Target" AnnotationPath="to_EDSBILL_A5/@UI.LineItem"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Partner Function Details"/><PropertyValue Property="ID" String="EDSDOCS"/><PropertyValue Property="Target" AnnotationPath="to_EDSDOCS_A6/@UI.LineItem"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Document Set - Bank Realisation"/><PropertyValue Property="ID" String="edsbrc"/><PropertyValue Property="Target" AnnotationPath="to_EDSBRC_A7/@UI.LineItem"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EXIM : EDS General Header Details"/><PropertyValue Property="TypeNamePlural" String="EXIM : EDS General Header Details"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bukrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comminvno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="openbanks"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="openbankl"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bankrefnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="epcnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="epcexpiry"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expname"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="designation"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="jdgftcode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="jdgftdsec"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lcdocno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lcversion"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="inco1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="inco2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="zterm"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="SGS Inspection"/><PropertyValue Property="Value" Path="sgs_inspection"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invoiceno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invoicecurr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Beneficiary Account Number"/><PropertyValue Property="Value" Path="ben_acc_no"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="originct"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="date_anlys"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comm_for_a2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comm_curr_a2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="contrno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="beneficiery"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="account_no"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="datacopy"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="datacopydocclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="datacopydocnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="edspurpose"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="istrchk"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iscrnynote"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bond_gst"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bondno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="poedate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ernam"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ersda"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aenam"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="laeda"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="deleted"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="grwaiver_sel"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="htext"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="zuxtkey"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bukrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comminvno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="openbanks"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="openbankl"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bankrefnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="epcnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="epcexpiry"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expname"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="designation"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="jdgftcode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="jdgftdsec"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lcdocno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lcversion"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="inco1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="inco2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="zterm"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sgs_inspection"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invoiceno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invoicecurr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ben_acc_no"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="originct"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="date_anlys"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comm_for_a2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comm_curr_a2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="contrno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="beneficiery"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="account_no"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="datacopy"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="datacopydocclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="datacopydocnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="edspurpose"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="istrchk"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iscrnynote"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bond_gst"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bondno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="poedate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ernam"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ersda"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aenam"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="laeda"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="deleted"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="grwaiver_sel"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="htext"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="zuxtkey"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxi_edshphd_a2Type">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Shipping Header Table"/><PropertyValue Property="ID" String="edshphd"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EXIM : EDS Shipping Header Table"/><PropertyValue Property="TypeNamePlural" String="EXIM : EDS Shipping Header Table"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="portcode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="loadagent"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="customhouse"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="portdschr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="dschagent"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cntrydest"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shipto"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shipfrom"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="voyfly"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vslname"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vesselownr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vehclfrm"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vehclto"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shp_biltyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shptype"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpline"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpagnt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpbilno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpbildt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cussealno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="excsealno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpsealno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="grnumber"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="grdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ar4no"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="licenceno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="licencedt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="etddt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="etadt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bolduedt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bolnum"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="boldt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lcdocno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="letexpdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="containerno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="containerdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="boe_amount"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="boe_curr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cntry_origin"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="annexure_reqd"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="date_issue"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ocean_grph"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="booking_no"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="selbuyrel"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="methodval"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="naturetxn"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="infldprice"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="preshpbill"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="preshpdate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="placeev"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="chacode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="precarby"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="findestin"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="etdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="etat"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="portcode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="loadagent"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="customhouse"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="portdschr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="dschagent"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cntrydest"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shipto"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shipfrom"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="voyfly"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vslname"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vesselownr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vehclfrm"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vehclto"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shp_biltyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shptype"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpline"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpagnt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpbilno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpbildt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cussealno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="excsealno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="shpsealno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="grnumber"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="grdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ar4no"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="licenceno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="licencedt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="etddt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="etadt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bolduedt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bolnum"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="boldt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lcdocno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="letexpdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="containerno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="containerdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="boe_amount"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="boe_curr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cntry_origin"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="annexure_reqd"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="date_issue"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ocean_grph"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="booking_no"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="selbuyrel"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="methodval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="naturetxn"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="infldprice"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="preshpbill"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="preshpdate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="placeev"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="chacode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="precarby"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="findestin"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="etdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="etat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxi_edsitem_a4Type">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Item Details"/><PropertyValue Property="ID" String="edsitem"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EXIM : EDS Item Details"/><PropertyValue Property="TypeNamePlural" String="EXIM : EDS Item Details"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="posnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="maktx"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="arktx"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="hscode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="kwmeng"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vrkme"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netwr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="waerk"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netpr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brgew"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ntgew"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gewei"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="packtype"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="nopack"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="indentno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fobval"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insu"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comm"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="disc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pstyv"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="charg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="uecha"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refvbeln"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="itext"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refposnr"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="posnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="maktx"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="arktx"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="hscode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="kwmeng"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="vrkme"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netwr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="waerk"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="netpr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brgew"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ntgew"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gewei"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="packtype"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="nopack"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="indentno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fobval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="frgt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="insu"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="comm"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="disc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pstyv"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="charg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="uecha"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refvbeln"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="itext"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refposnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_EDSPARTDET_A3Type">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM : EDS Partner Function Details"/><PropertyValue Property="ID" String="EDSPARTDET"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EXIM : EDS Partner Function Details"/><PropertyValue Property="TypeNamePlural" String="EXIM : EDS Partner Function Details"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="parvw"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="partnertype"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="kunnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="addrnumber"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name3"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name4"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name_co"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="city1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="city2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="city_code"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cityp_code"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="home_city"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cityh_code"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="chckstatus"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="regiogroup"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="post_code1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="post_code2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="post_code3"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pcode1_ext"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pcode2_ext"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pcode3_ext"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="dont_use_p"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box_num"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box_loc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="city_code2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box_reg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box_cty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="postalarea"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="transpzone"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="street"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="streetcode"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="streetabbr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="house_num1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="house_num2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="house_num3"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="str_suppl1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="str_suppl2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="str_suppl3"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="location"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="building"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="floor"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="roomnumber"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="country"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="region"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pers_addr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sort1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sort2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sort_phn"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="deflt_comm"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tel_number"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tel_extens"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fax_number"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fax_extens"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="mc_name1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="mc_city1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="mc_street"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="extension1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="extension2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="id_category"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="county_code"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="county"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="mc_county"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="stcd1"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docclas"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="parvw"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="partnertype"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="kunnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="addrnumber"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name3"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name4"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name_co"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="city1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="city2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="city_code"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cityp_code"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="home_city"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cityh_code"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="chckstatus"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="regiogroup"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="post_code1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="post_code2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="post_code3"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pcode1_ext"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pcode2_ext"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pcode3_ext"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="dont_use_p"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box_num"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box_loc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="city_code2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box_reg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="po_box_cty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="postalarea"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="transpzone"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="street"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="streetcode"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="streetabbr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="house_num1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="house_num2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="house_num3"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="str_suppl1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="str_suppl2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="str_suppl3"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="location"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="building"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="floor"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="roomnumber"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="country"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="region"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pers_addr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sort1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sort2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sort_phn"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="deflt_comm"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tel_number"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tel_extens"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fax_number"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fax_extens"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="mc_name1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="mc_city1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="mc_street"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="extension1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="extension2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="id_category"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="county_code"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="county"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="mc_county"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="stcd1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.fircType/docnr"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="cds_xbrixsd_docset.fircType/docclas"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="cds_xbrixsd_docset.fircType/smode"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_IBSEXPSIONType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Assign Export Item to SION"/><PropertyValue Property="ID" String="AssignExportItemtoSION"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Assign Export Item to SION"/><PropertyValue Property="TypeNamePlural" String="Assign Export Item to SION"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="siono"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Export Item Quantity"/><PropertyValue Property="Value" Path="quant"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matkl"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Export Item UOM"/><PropertyValue Property="Value" Path="unit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="prcunit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sionact"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="siono"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="quant"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matkl"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="unit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="prcunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sionact"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xbrixI_ibsitmmatType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Benefit Item Details"/><PropertyValue Property="ID" String="BenefitItemDetails"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Benefit Item Details"/><PropertyValue Property="TypeNamePlural" String="Benefit Item Details"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="itmtyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matkl"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="withsion"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matdesc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="quant"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="unit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valadd"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="siono"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="selitem"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="seqno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="proctyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ratsiono"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lckflg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sel"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgqty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgunit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgcukyfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgcukylc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="balqty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="prcunit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fobval"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exchrt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ernam"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ersda"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aenam"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="laeda"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="itmtyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matkl"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="withsion"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matdesc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="quant"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="unit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valadd"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="siono"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="selitem"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="seqno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="proctyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ratsiono"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lckflg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sel"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgqty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgcukyfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgcukylc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="balqty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="prcunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fobval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exchrt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ernam"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ersda"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aenam"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="laeda"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxi_ibslilicutmType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="EXIM: Common Utlizaton and Obligation Tracking"/><PropertyValue Property="ID" String="ibslilicutm"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="EXIM: Common Utlizaton and Obligation Tracking"/><PropertyValue Property="TypeNamePlural" String="EXIM: Common Utlizaton and Obligation Tracking"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsutilno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="utildt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matkl"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="anln1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="anln2"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="itmtyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="utiltyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refdoc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refdate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docunit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docitm"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invoicenr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invoicedt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docqty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docvalfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docvallc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docexrate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsvalfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsvallc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsexrate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsdtysavd"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="delind"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsqty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsunit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docorgin"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgqty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgunit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgcukyfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgcukylc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="balqty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sel"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsutilno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="utildt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matkl"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="anln1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="anln2"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="itmtyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="utiltyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refdoc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refdate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docitm"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invoicenr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="invoicedt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cukyfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docqty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docvalfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docvallc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docexrate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsvalfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsvallc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsexrate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsdtysavd"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="delind"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsqty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="docorgin"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgqty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgcukyfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgcukylc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="balqty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sel"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xbrixi_ibsmasterType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Benefits master"/><PropertyValue Property="ID" String="docnr"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Asset import"/><PropertyValue Property="ID" String="i_ibsitmast"/>
+							<PropertyValue Property="Target" String="UI.FACET$2$">
+								<Annotation Term="Core.Messages">
+									<Collection>
+										<Record><PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-000"/><PropertyValue Property="message"
+											String="Navigation property '_asset' of annotation 'UI.FACET$2$' in proj./view '/bri/i_ibsmaster' not found"/><PropertyValue Property="severity" String="error"/></Record>
+									</Collection>
+								</Annotation>
+							</PropertyValue>
+						</Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Benefit Item Details"/><PropertyValue Property="ID" String="I_ibsitmmat"/><PropertyValue Property="Target" AnnotationPath="to_BenefitItemDetails/@UI.LineItem"/></Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Include -CIF value details"/><PropertyValue Property="ID" String="i_iibscifval"/>
+							<PropertyValue Property="Target" String="UI.FACET$4$">
+								<Annotation Term="Core.Messages">
+									<Collection>
+										<Record><PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-000"/><PropertyValue Property="message"
+											String="Navigation property '_CIFvaluedetails' of annotation 'UI.FACET$4$' in proj./view '/bri/i_ibsmaster' not found"/><PropertyValue Property="severity" String="error"/></Record>
+									</Collection>
+								</Annotation>
+							</PropertyValue>
+						</Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Include - Export/import item details"/><PropertyValue Property="ID" String="I_IBSREPROD"/>
+							<PropertyValue Property="Target" String="UI.FACET$6$">
+								<Annotation Term="Core.Messages">
+									<Collection>
+										<Record><PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-000"/><PropertyValue Property="message"
+											String="Navigation property '_Exportimportitemdetails' of annotation 'UI.FACET$6$' in proj./view '/bri/i_ibsmaster' not found"/><PropertyValue Property="severity" String="error"/></Record>
+									</Collection>
+								</Annotation>
+							</PropertyValue>
+						</Record>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Post exports-scrip value header details"/><PropertyValue Property="ID" String="I_IBSPSTEXPHD"/>
+							<PropertyValue Property="Target" String="UI.FACET$5$">
+								<Annotation Term="Core.Messages">
+									<Collection>
+										<Record><PropertyValue Property="code" String="SADL_GW_EXP_VOCAN-000"/><PropertyValue Property="message"
+											String="Navigation property '_exportsscrip' of annotation 'UI.FACET$5$' in proj./view '/bri/i_ibsmaster' not found"/><PropertyValue Property="severity" String="error"/></Record>
+									</Collection>
+								</Annotation>
+							</PropertyValue>
+						</Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="benefits master"/><PropertyValue Property="TypeNamePlural" String="benefits master"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="profdesc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="appln"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="appltyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="classif"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bnftyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsorigin"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="profno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="butxt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bukrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="code"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="issauth"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="coddesc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="portcd"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fileno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="filedt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="prdgrp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lifnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="werks"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="transferable"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="manualedi"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="redmtndt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="solddt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="purdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="submdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcptdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="chasubdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="charecdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="edirefno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="avgobligamlc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="avgobligfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="savdty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="useddty"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="totcifval"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usedcifval"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="issdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="strdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="enddt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expenddt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="clsdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="impval"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="impunit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expval"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expunit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="impvalupto"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expvalupto"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valadd"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="approveindi"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bswith"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="instplant"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="epcgcat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="licyear"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rstrtdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="renddt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sedgft"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="reject_reason"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ecomnum"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ecomdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="prem_amt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="kunnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="soldate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="margin_amt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="inv_no"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lcscod"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="inv_date"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="avlamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tranval"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="newtranval"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obliglc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ocukylc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligkyfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligexchrt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgfc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligunit"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligper"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obgtims"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="nonorms"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ratified"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bndregno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bndstrtdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bndenddt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bnkguarno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bnkguarsdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bnkguaredt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lutno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lutdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="epcgtyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="filingdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="portexp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="entamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="split"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="splitno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="splitamt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="letexpfrom"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="letexpto"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="latecut"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="payno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bankl"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brnch"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pymtmeth"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aplfee"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="paydt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="applstat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsstat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lckflg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="apprstat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lckstat"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ernam"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ersda"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aenam"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="laeda"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="timestamp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="third_party_name"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="notifsrno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="delind"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="profdesc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="trkdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="appln"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="appltyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="classif"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bnftyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsorigin"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="profno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="butxt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bukrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="code"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="issauth"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="coddesc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="portcd"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="refno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="fileno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="filedt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="prdgrp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lifnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="werks"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="transferable"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="manualedi"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="redmtndt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="solddt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="purdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="submdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcptdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="chasubdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="charecdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="edirefno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="avgobligamlc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="avgobligfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="savdty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="useddty"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="totcifval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usedcifval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="issdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="strdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="enddt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expenddt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="clsdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="impval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="impunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="impvalupto"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="expvalupto"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="valadd"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="approveindi"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bswith"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="instplant"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="epcgcat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="licyear"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rstrtdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="renddt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="sedgft"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="reject_reason"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ecomnum"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ecomdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="prem_amt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="kunnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="soldate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="margin_amt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="inv_no"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lcscod"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="inv_date"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="avlamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="tranval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="newtranval"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obliglc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ocukylc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligkyfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligexchrt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="usgfc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligunit"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obligper"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="obgtims"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="nonorms"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ratified"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bndregno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bndstrtdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bndenddt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bnkguarno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bnkguarsdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bnkguaredt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lutno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lutdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="epcgtyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="filingdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="portexp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="entamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="split"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="splitno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="splitamt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="letexpfrom"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="letexpto"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="latecut"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="payno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bankl"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brnch"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pymtmeth"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aplfee"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="paydt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="applstat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bsstat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lckflg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="apprstat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="lckstat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ernam"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ersda"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="aenam"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="laeda"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="timestamp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="delind"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="third_party_name"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="notifsrno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_IBSMATGRPType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Define Material Groups"/><PropertyValue Property="ID" String="Material_groups"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Define Material Groups"/><PropertyValue Property="TypeNamePlural" String="Define Material Groups"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Material Group"/><PropertyValue Property="Value" Path="matkl"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Code Description"/><PropertyValue Property="Value" Path="coddesc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Item Category"/><PropertyValue Property="Value" Path="itmcat"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="matkl"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="coddesc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="itmcat"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>matkl</PropertyPath>
+						<PropertyPath>itmcat</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_IBSPROFILType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Define Profiles"/><PropertyValue Property="ID" String="MaintainProfile"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Define Profiles"/><PropertyValue Property="TypeNamePlural" String="Define Profiles"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="profno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="profdesc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bukrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="firmdesc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="estbdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecauth"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brnchno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ssiregno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ssiregdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ssiauth"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="panno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pandate"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="panauth"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="certno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="certdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cerauth"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="certvldt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcmcno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcmcdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcmcvldt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcmcaut"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="taxauth"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="servreg"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exnum"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exauth"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="servtaxregno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="servtaxregdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exregnum"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exregdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gstregno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gstregdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="statsno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="stissuedt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="stexpdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="stissueauth"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="steffecdt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="svbndfleno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bfregno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="svborddt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="svbordno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cushous"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ieccodsel"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecbnchcod"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gstno"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="adcod"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="profno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="profdesc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bukrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="firmdesc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="estbdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecauth"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="brnchno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ssiregno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ssiregdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ssiauth"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="panno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="pandate"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="panauth"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="certno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="certdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cerauth"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="certvldt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcmcno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcmcdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcmcvldt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="rcmcaut"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="taxauth"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="servreg"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exnum"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exauth"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="servtaxregno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="servtaxregdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exregnum"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="exregdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gstregno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gstregdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="statsno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="stissuedt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="stexpdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="stissueauth"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="steffecdt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="svbndfleno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bfregno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="svborddt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="svbordno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="cushous"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ieccodsel"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="iecbnchcod"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="gstno"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="adcod"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.lcType/docnr"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="cds_xbrixsd_docset.lcType/docclas"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="cds_xbrixsd_docset.lcType/smode"><Annotation Term="UI.Hidden"/></Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_PORT_CODTYPType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Maintain Code type"/><PropertyValue Property="ID" String="Code_type"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Code"/><PropertyValue Property="Value" Path="code"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Code Type"/><PropertyValue Property="Value" Path="codtyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Code Description"/><PropertyValue Property="Value" Path="coddesc"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="SAP Port Code"/><PropertyValue Property="Value" Path="portcod"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="code"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="codtyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="portcod"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="coddesc"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_T001Type">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Company Code"/><PropertyValue Property="ID" String="bukrs"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Company Code"/><PropertyValue Property="TypeNamePlural" String="Company Codes"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Company Code"/><PropertyValue Property="Value" Path="bukrs"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Company Name"/><PropertyValue Property="Value" Path="butxt"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="City"/><PropertyValue Property="Value" Path="ort01"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Country"/><PropertyValue Property="Value" Path="land1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Currency"/><PropertyValue Property="Value" Path="waers"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Address"/><PropertyValue Property="Value" Path="adrnr"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="bukrs"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="butxt"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="ort01"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="land1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="waers"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="adrnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="cds_xbrixsd_docset.xBRIxI_T001wType">
+				<Annotation Term="UI.Facets">
+					<Collection>
+						<Record Type="UI.ReferenceFacet"><PropertyValue Property="Label" String="Plants/Branches"/><PropertyValue Property="ID" String="plantsbranches"/><PropertyValue Property="Target" AnnotationPath="@UI.Identification"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Plants/Branches"/><PropertyValue Property="TypeNamePlural" String="Plants/Branches"/>
+						<PropertyValue Property="Title"><Record Type="UI.DataField"/></PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Plant"/><PropertyValue Property="Value" Path="werks"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name1"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="adrnr"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="clearancetyp"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Clearancetyp Description"/><PropertyValue Property="Value" Path="description"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="werks"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="name1"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="adrnr"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="clearancetyp"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="description"/><Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/></Record>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
